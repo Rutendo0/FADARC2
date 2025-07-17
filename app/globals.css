@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(0, 0%, 7%);
+  --muted: hsl(210, 4.8%, 95.9%);
+  --muted-foreground: hsl(215, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 7%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(0, 0%, 7%);
+  --border: hsl(214, 13%, 90%);
+  --input: hsl(214, 13%, 90%);
+  --primary: hsl(354, 84%, 57%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(210, 4.8%, 95.9%);
+  --secondary-foreground: hsl(0, 0%, 7%);
+  --accent: hsl(210, 4.8%, 95.9%);
+  --accent-foreground: hsl(0, 0%, 7%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(354, 84%, 57%);
+  --radius: 0.75rem;
+
+  /* Professional Fadarc brand colors */
+  --fadarc-red: hsl(354, 84%, 57%);
+  --fadarc-red-light: hsl(354, 84%, 65%);
+  --fadarc-red-dark: hsl(354, 84%, 45%);
+  --fadarc-red-darker: hsl(354, 84%, 35%);
+  --fadarc-gray: hsl(210, 15%, 25%);
+  --fadarc-gray-light: hsl(210, 15%, 35%);
+  --fadarc-black: hsl(210, 20%, 8%);
+  --fadarc-blue: hsl(210, 100%, 50%);
+  --fadarc-green: hsl(142, 76%, 36%);
+}
+
+.dark {
+  --background: hsl(210, 20%, 8%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(210, 15%, 15%);
+  --muted-foreground: hsl(215, 5%, 64.9%);
+  --popover: hsl(210, 20%, 8%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(210, 20%, 10%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(210, 15%, 15%);
+  --input: hsl(210, 15%, 15%);
+  --primary: hsl(354, 84%, 57%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(210, 15%, 15%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(210, 15%, 15%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(354, 84%, 57%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    line-height: 1.6;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold;
+    line-height: 1.2;
+  }
+}
+
+@layer utilities {
+  /* Professional gradient backgrounds */
+  .gradient-red {
+    background: linear-gradient(135deg, var(--fadarc-red) 0%, var(--fadarc-red-dark) 100%);
+  }
+
+  .gradient-red-light {
+    background: linear-gradient(135deg, var(--fadarc-red-light) 0%, var(--fadarc-red) 100%);
+  }
+
+  .gradient-dark {
+    background: linear-gradient(135deg, var(--fadarc-black) 0%, var(--fadarc-gray) 100%);
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, var(--fadarc-black) 0%, var(--fadarc-gray) 50%, var(--fadarc-red-darker) 100%);
+  }
+  /* Brand colors */
+  .fadarc-red {
+    color: var(--fadarc-red);
+  }
+
+  .bg-fadarc-red {
+    background-color: var(--fadarc-red);
+  }
+
+  .bg-fadarc-red-light {
+    background-color: var(--fadarc-red-light);
+  }
+
+  .bg-fadarc-red-dark {
+    background-color: var(--fadarc-red-dark);
+  }
+
+  .bg-fadarc-red-darker {
+    background-color: var(--fadarc-red-darker);
+  }
+
+  .bg-fadarc-gray {
+    background-color: var(--fadarc-gray);
+  }
+
+  .bg-fadarc-gray-light {
+    background-color: var(--fadarc-gray-light);
+  }
+
+  .bg-fadarc-black {
+    background-color: var(--fadarc-black);
+  }
+
+  .text-fadarc-red {
+    color: var(--fadarc-red);
+  }
+
+  .text-fadarc-red-light {
+    color: var(--fadarc-red-light);
+  }
+
+  .text-fadarc-gray {
+    color: var(--fadarc-gray);
+  }
+
+  .text-fadarc-gray-light {
+    color: var(--fadarc-gray-light);
+  }
+
+  .text-fadarc-black {
+    color: var(--fadarc-black);
+  }
+
+  .border-fadarc-red {
+    border-color: var(--fadarc-red);
+  }
+
+  .hover\:bg-fadarc-red-dark:hover {
+    background-color: var(--fadarc-red-dark);
+  }
+
+  .hover\:bg-fadarc-red-darker:hover {
+    background-color: var(--fadarc-red-darker);
+  }
+
+  .hover\:text-fadarc-red:hover {
+    color: var(--fadarc-red);
+  }
+  /* Professional shadows */
+  .shadow-professional {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .shadow-professional-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .shadow-professional-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  /* Hover effects */
+  .hover-lift {
+    transition: all 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  }
+  /* Professional card styling */
+  .professional-card {
+    @apply bg-white border border-gray-200 rounded-xl shadow-professional;
+    transition: all 0.3s ease;
+  }
+
+  .professional-card:hover {
+    @apply shadow-professional-lg border-fadarc-red;
+    transform: translateY(-2px);
+  }
+  /* Button styles */
+  .btn-primary {
+    @apply bg-fadarc-red text-white px-6 py-3 rounded-lg font-semibold shadow-professional;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    @apply bg-fadarc-red-dark shadow-professional-lg;
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    @apply bg-white text-fadarc-red border-2 border-fadarc-red px-6 py-3 rounded-lg font-semibold;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-fadarc-red text-white;
+    transform: translateY(-1px);
+  }
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    .hover-lift:hover {
+      transform: none;
+    }
+
+    .professional-card:hover {
+      transform: none;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      transform: none;
+    }
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(210, 4.8%, 95.9%);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--fadarc-red);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fadarc-red-dark);
+}
